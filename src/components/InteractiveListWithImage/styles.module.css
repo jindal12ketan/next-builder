@@ -1,0 +1,106 @@
+.interactiveListWithImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 150px;
+}
+
+.listContainer, .imageContainer {
+    width: 50%;
+    position: relative;
+}
+
+.imageContainer img {
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+    aspect-ratio: 1/1;
+}
+
+.listTitle {
+    font-size: 3rem !important;
+    font-family: 'PTSerif', sans-serif;
+    font-weight: 400;
+}
+
+.listSubTitle {
+    font-size: 1.2rem !important;
+    color: #006269;
+}
+
+.listText {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #666;
+}
+
+.listContainer h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.listItem {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+    cursor: pointer;
+    border: solid 1px #bfbfbf;
+    padding: 15px 25px;
+}
+
+.listItem:hover {
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.05);
+}
+
+.listItem a {
+    color: #fa8b60;
+    font-weight: 600;
+}
+
+.listItem a:hover {
+    text-decoration: underline;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.itemText {
+    flex-grow: 1;
+}
+
+.itemText h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.itemText a {
+    color: #000;
+    text-decoration: none;
+}
+
+.itemText a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1024px) {
+    .interactiveListWithImage {
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+
+    .listContainer,
+    .imageContainer {
+        width: 100%;
+    }
+
+    .listContainer {
+        padding: 0;
+    }
+}

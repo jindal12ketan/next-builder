@@ -1,0 +1,65 @@
+/* PTSerif */
+  @font-face {
+    font-family: "PTSerif";
+    font-style: normal;
+    font-weight: 400;
+    src: url("./fonts/ptserif-regular-webfont-38b02094d7b1cc915b8186eabf0b6556.woff2") format("woff2"),
+         url("./fonts/ptserif-regular-webfont-7fea823cf9b5978140662e0aa7007e49.woff") format("woff");
+  }
+  
+  @font-face {
+    font-family: "PTSerif";
+    font-style: normal;
+    font-weight: 700;
+    src: url("./fonts/ptserif-bold-webfont-8e03db603f9e0fc7cce1748832994deb.woff2") format("woff2"),
+         url("./fonts/ptserif-bold-webfont-40b3864718f8d2a4e43446d4faa63f99.woff") format("woff");
+  }
+  
+ 
+  /* ProximaNova */
+  @font-face {
+    font-family: "ProximaNova";
+    font-style: normal;
+    font-weight: 300;
+    src: url("./fonts/Proxima-Nova-Light-367531d5c657281665cd0d8f31ae4b79.otf") format("opentype");
+  }
+  
+  @font-face {
+    font-family: "ProximaNova";
+    font-style: normal;
+    font-weight: 400;
+    src: url("./fonts/ProximaNova-Regular-fd587f5a8435ec062478c3102e1f9e2c.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "ProximaNova";
+    font-style: normal;
+    font-weight: 600;
+    src: url("./fonts/proximanova-bold-webfont-0df61a579eb550820a048d7a28d03124.woff2") format("woff2"),
+         url("./fonts/proximanova-bold-webfont-812df50123a9215c568de1b6aad097a3.woff") format("woff");
+  }
+  
+  /* Canela Web */
+  @font-face {
+    font-family: "Canela Web";
+    font-style: normal;
+    font-weight: 300;
+    src: url("./fonts/Canela-Light-Web-efa371d8c857a95c0eca35bbed6fab54.woff") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Canela Web";
+    font-style: normal;
+    font-weight: 300;
+    src: url("./fonts/Canela-Light-Web-de03a05e13a622bad6aeb9ddb83674e9.woff2") format("woff2"),
+         url("./fonts/Canela-Light-Web-efa371d8c857a95c0eca35bbed6fab54.woff") format("woff");
+  }
+  
+  @font-face {
+    font-family: "Canela Thin";
+    font-style: normal;
+    font-weight: 200;
+    src: url("./fonts/Canela-Thin-116de5fea8558600197de2dca5c80f9a.woff2") format("woff2"),
+         url("./fonts/Canela-Thin-ab0c985593e29249c15f13508cb95c66.woff") format("woff");
+  }
+  

@@ -1,0 +1,92 @@
+.testimonialBlock {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    text-align: left;
+}
+
+.content {
+    max-width: 800px;
+}
+
+.blockquote {
+    margin: 0;
+}
+
+.review {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.stars {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.activeStar, .inactiveStar {
+    color: white;
+}
+
+.inactiveStar {
+    opacity: 0.3;
+}
+
+.reviewDescription {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.reviewerName {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.reviewerLocation {
+    font-size: 1rem;
+}
+
+.dots {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #006d71;
+}
+
+
+@media screen and (max-width: 768px){
+    .dots {
+        padding: 10px 5px;
+        border-radius: 50px;
+    }
+
+    .dot {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .content {
+        padding: 20px;
+    }
+}

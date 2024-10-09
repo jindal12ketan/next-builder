@@ -1,0 +1,50 @@
+.ctaBlock {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ffffff;
+}
+
+.ctaContent {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.ctaHook {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: 'PTSerif', sans-serif;
+    font-weight: 400;
+}
+
+.ctaDetails {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.ctaDetails a {
+    color: #fa8b60;
+    font-weight: 600;
+}
+
+.ctaFooter {
+    background-color: #e2f3f5;
+    padding: 20px;
+    position: relative;
+}
+
+.ctaFooter p {
+    font-size: 1.5rem;
+    margin: 0;
+    font-family: 'PTSerif', sans-serif;
+}
+
+.ctaFooter .arrow {
+    display: block;
+    width: 100%;
+    height: 50px;
+    background: url('/path/to/arrow.svg') no-repeat center center;
+    background-size: contain;
+}
