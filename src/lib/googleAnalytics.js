@@ -51,7 +51,7 @@ async function getAnalyticsReport() {
     requestBody: request,
   });
 
-  const routesRows = response.data.rows;
+  const routesRows = response.data.rows || [];
   let transformedData = {};
 
   routesRows.forEach((row) => {
