@@ -14,9 +14,18 @@ export default function NavbarClient({ pages }) {
   const router = useRouter();
   const dispatch = useDispatch();
   const storedRoute = useSelector((state) => state.RouteSlice.storedRoute);
+  const prefetchedRoutesRef = useRef(new Set()); // Keep track of prefetched routes
+
   console.log("Stored Routes:", storedRoute);
+
   useEffect(() => {
     const prefetchRoutes = async () => {
+      // Check if the current route is already prefetched to avoid redundant API calls
+      if (prefetchedRoutesRef.current.has(currentPath)) {
+        console.log(`Route already prefetched: ${currentPath}`);
+        return;
+      }
+
       const routesWeights = await fetchAnalyticsWeights(currentPath);
       if (routesWeights) {
         const sortedRoutes = Object.entries(routesWeights)
@@ -32,10 +41,14 @@ export default function NavbarClient({ pages }) {
           const updatedRoutes = [...new Set([...storedRoute, ...newRoutes])];
           dispatch(routeStore({ storedRoute: updatedRoutes }));
           newRoutes.forEach((route) => {
-            console.log(`Prefetching route: ${route}`);
-            router.prefetch(route); // Ensure this is executed
+            console.log(`Prefetching new route: ${route}`);
+            router.prefetch(route);
+            prefetchedRoutesRef.current.add(route); // Mark route as prefetched
           });
         }
+
+        // Mark the current route as prefetched to avoid fetching its weights again
+        prefetchedRoutesRef.current.add(currentPath);
       } else {
         console.error(`No weights found for current path: ${currentPath}`);
       }
