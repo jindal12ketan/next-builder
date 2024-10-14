@@ -56,6 +56,7 @@ export default function NavbarClient({ pages }) {
           key={page.data.url}
           href={`/en-US${page.data.url}`}
           onClick={() => handleClick(`/en-US${page.data.url}`)}
+          prefetch={false}
         >
           {page.name || "Unnamed Page"}
         </Link>

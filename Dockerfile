@@ -23,11 +23,6 @@ ENV NEXT_PUBLIC_BUILDER_API_KEY=${NEXT_PUBLIC_BUILDER_API_KEY}
 ENV GA_PROPERTY_ID=${GA_PROPERTY_ID}
 ENV GA_TRACKING_ID=${GA_TRACKING_ID}
 
-# Print the environment variables to verify their values during the build process
-RUN echo "NEXT_PUBLIC_BUILDER_API_KEY: ${NEXT_PUBLIC_BUILDER_API_KEY}"
-RUN echo "GA_PROPERTY_ID: ${GA_PROPERTY_ID}"
-RUN echo "GA_TRACKING_ID: ${GA_TRACKING_ID}"
-
 # Build the Next.js app (includes fetching server-side pages from Builder.io)
 RUN npm run build
 
