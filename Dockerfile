@@ -25,6 +25,16 @@ FROM node:18-alpine AS runner
 # # Set environment variable to production
 # ENV NODE_ENV=production
 
+# Define build-time variables
+ARG NEXT_PUBLIC_BUILDER_API_KEY
+ARG GA_PROPERTY_ID
+ARG GA_TRACKING_ID
+
+# Pass ARG variables as ENV for build-time usage
+ENV NEXT_PUBLIC_BUILDER_API_KEY=${NEXT_PUBLIC_BUILDER_API_KEY}
+ENV GA_PROPERTY_ID=${GA_PROPERTY_ID}
+ENV GA_TRACKING_ID=${GA_TRACKING_ID}
+
 # Set working directory in the runner container
 WORKDIR /app
 
